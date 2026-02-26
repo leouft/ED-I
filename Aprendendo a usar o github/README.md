@@ -66,7 +66,7 @@ Crie um repositório no GitHub e copie o link (ou pegue o link de outro reposit�
 ```
 
 ```
-git clone URL_DO_REPOSITORIO
+git clone URL_DO_REPOSITORIO.git
 ```
 Utilize isso no terminal na pasta do seu computador que deseja salvar localmente o projeto,
 isso vai trazer TUDO que está nele para o seu local (computador) dentro de uma pasta.
