@@ -3,13 +3,7 @@
 
 void vefNum(int *, int V[], int);
 
-void printV(int V[])
-{
-    for (int i = 0; i < MAX; i++)
-    {
-        printf("%d ", V[i]);
-    }
-}
+void printV(int V[]);
 
 void main()
 {
@@ -37,4 +31,12 @@ void vefNum(int *temp, int V[], int i)
         }
     }
     V[i] = *temp;
+}
+
+void printV(int V[])
+{
+    for (int i = 0; i < MAX; i++)
+    {
+        printf("%d ", V[i]);
+    }
 }
