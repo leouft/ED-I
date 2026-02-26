@@ -8,12 +8,12 @@ Cria uma pasta oculta que fica o histórico (deve ser executado no terminal da p
 ```
 git add .
 ```
-Adiciona todos arquivos do projeto (sempre que criar um arquivo novo, é necessário utilizar git add nome_do_arquivo para adicioná-lo).
+Adiciona todos arquivos do projeto (sempre que criar um arquivo novo, é necessário utilizar git add nome_do_arquivo para adicioná-lo e também ao modificá-lo).
 
 ```
 git commit -m "Primeiro commit"
 ```
-Cria um commit para o projeto (utilize sempre que atualizar algo já existente no projeto).
+Cria um commit para o projeto (utilize sempre que atualizar algo já existente no projeto ou criar).
 
 
 ```
