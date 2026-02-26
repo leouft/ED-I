@@ -1,3 +1,8 @@
+# Observações
+
+Ao seguir as instruções daqui, já supunho
+que você tenha o Git baixado.
+
 # Criando um projeto e mandando para o GitHub
 
 ```
