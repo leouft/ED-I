@@ -41,7 +41,7 @@ Envia tudo para o GitHub.
 ```
 git add nome_do_arquivo
 ```
-Sempre use ao adicionar novos arquivos.
+Sempre use ao adicionar novos arquivos e atualizá-los.
 
 ```
 git commit -m "mensagem"
