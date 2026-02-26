@@ -52,3 +52,23 @@ Adiciona um commit com a mensagem de alterações.
 git push
 ```
 Envia pro GitHub.
+
+# Baixar atualizações do seu projeto
+```
+git pull
+```
+Ele busca o que tiver de diferente do GitHub pro seu local (computador) e baixa tudo.
+
+
+# Criando um projeto pelo GitHub e mandando pro PC (também serve pra pegar projeto dozotro)
+```
+Crie um repositório no GitHub e copie o link (ou pegue o link de outro repositório que deseja fazer isso)
+```
+
+```
+git clone URL_DO_REPOSITORIO
+```
+Utilize isso no terminal na pasta do seu computador que deseja salvar localmente o projeto,
+isso vai trazer TUDO que está nele para o seu local (computador) dentro de uma pasta.
+
+Nesse caso tá pronto só ir mantendo atualizações e baixando atualizações bjoossss.
