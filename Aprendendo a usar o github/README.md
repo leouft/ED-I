@@ -88,3 +88,30 @@ git push -u origin main
 ```
 Envia tudo pro GitHub,
 a partir daqui, só manter atualizando.
+
+# Retornar o seu local para uma versão antiga
+```
+git log --oneline
+```
+Mostra o histórico de commits (também pode ser visto pelo próprio GitHub).
+Irá mostrar algo tipo:
+a1b2c3d Atualização tal 2
+d4e5f6g Atualização tal
+f7g8h9i Primeiro commit
+Onde esses codigos iniciais são hash, o que identifica uma commit.
+
+```
+git checkout HASH_DO_COMMIT
+```
+Testa uma versão antiga no computador (local).
+Então seus arquivos vão ficar igual essa versão
+do commit, mas nao se preocupe, a versão atualizada
+ainda está salva no GitHub.
+Se quiser salvar essa atualização atual, só
+fazer igual as outras vezes.
+
+```
+git checkout main
+```
+Retorna pra versão mais recente que está
+no seu repositório do GitHub.
