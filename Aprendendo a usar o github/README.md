@@ -71,4 +71,20 @@ git clone URL_DO_REPOSITORIO.git
 Utilize isso no terminal na pasta do seu computador que deseja salvar localmente o projeto,
 isso vai trazer TUDO que está nele para o seu local (computador) dentro de uma pasta.
 
-Nesse caso tá pronto só ir mantendo atualizações e baixando atualizações bjoossss.
+Nesse caso tá pronto se o repositório for teu, só ir mantendo atualizações e baixando atualizações bjoossss.
+
+Caso não, continua:
+
+```
+git remote remove origin
+git remote add origin URL_DO_SEU_REPOSITORIO
+```
+Ou seja, crie outro repositório, e rode os códigos.
+Isso vai conectar o seu repositório clonado no
+seu computador com o novo da sua conta do GitHub.
+
+```
+git push -u origin main
+```
+Envia tudo pro GitHub,
+a partir daqui, só manter atualizando.
