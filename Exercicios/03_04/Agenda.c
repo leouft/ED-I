@@ -24,7 +24,6 @@ void main()
         return;
     }
 
-
     FILE *file = fopen("contatos.csv", "r");
     if (file == NULL)
     {
