@@ -150,7 +150,6 @@ void salvarContatos(contato *c, int capacidade)
     if (file == NULL)
     {
         printf("\nErro ao abrir o arquivo.\n");
-        return;
     }
     for (int i = 0; i < capacidade; i++)
     {
