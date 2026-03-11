@@ -7,7 +7,7 @@ typedef struct _conj Conj;
  * @return um ponteiro para um conjunto alocado dinamicamente
  */
 
-Conj* Conj_create(int);
+Conj* Conj_create();
 /**
  * Cria um conjunto vazio com capacidade para size elementos.
  * @param size quantidade de elementos do vetor
