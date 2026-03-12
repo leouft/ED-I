@@ -17,4 +17,20 @@ void Conj_insert(Conj*, int);
 
 void Conj_remove(Conj*, int);
 
+Conj* Conj_intersection(Conj*, Conj*);
+
+Conj* Conj_difference(Conj*, Conj*);
+
+Conj* Conj_union(Conj*, Conj*);
+
+int Conj_maior(Conj*);
+
+int Conj_menor(Conj*);
+
+int Conj_equals(Conj*, Conj*);
+
+int Conj_size(Conj*);
+
+int Conj_null(Conj*);
+
 #endif
