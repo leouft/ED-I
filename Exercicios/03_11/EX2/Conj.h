@@ -10,7 +10,7 @@ typedef struct _conj Conj;
 Conj* Conj_create();
 /**
  * Cria um conjunto vazio com capacidade para size elementos.
- * @param size quantidade de elementos do vetor
+ * @return um ponteiro para o conjunto criado
  */
 
 void Conj_insert(Conj*, int);
