@@ -16,6 +16,10 @@ void TPonto_set_x(TPonto*, float);
 
 void TPonto_set_y(TPonto*, float);
 
+void TPonto_get_x(TPonto*, float*);
+
+void TPonto_get_y(TPonto*, float*);
+
 float TPonto_dist(TPonto*, TPonto*);
 
 #endif

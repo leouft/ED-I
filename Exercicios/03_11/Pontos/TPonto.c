@@ -52,6 +52,22 @@ void TPonto_set_y(TPonto* ponto, float y)
     }
 }
 
+void TPonto_get_x(TPonto* ponto, float* x)
+{
+    if (ponto != NULL && x != NULL)
+    {
+        *x = ponto->x;
+    }
+}
+
+void TPonto_get_y(TPonto* ponto, float* y)
+{
+    if (ponto != NULL && y != NULL)
+    {
+        *y = ponto->y;
+    }
+}
+
 float TPonto_dist(TPonto* ponto1, TPonto* ponto2)
 {
     if (ponto1 != NULL && ponto2 != NULL)

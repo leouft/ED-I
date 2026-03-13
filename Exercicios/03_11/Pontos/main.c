@@ -18,7 +18,7 @@ void main()
 
     do
     {
-        printf("\nO que deseja fazer?\nImprimir ponto [1]\nModificar os valores dos pontos [2]\nCalcular a distância entre os pontos [3]\nSair [0]\nOpção: ");
+        printf("\nO que deseja fazer?\nImprimir ponto [1]\nModificar os valores dos pontos [2]\nCalcular a distância entre os pontos [3]\nAdquirir os valores do ponto [4]\nSair [0]\nOpção: ");
         scanf("%d", &op);
         switch (op)
         {
@@ -35,7 +35,7 @@ void main()
             }
             else
             {
-                printf("Opção inválida!\n");
+                printf("\nOpção inválida!\n");
             }
             putchar('\n');
             break;
@@ -58,19 +58,38 @@ void main()
             }
             else
             {
-                printf("Opção inválida!\n");
+                printf("\nOpção inválida!\n");
             }
             break;
         case 3:
             printf("\nDistância entre os pontos: %0.2f\n", TPonto_dist(ponto1, ponto2));
             break;
+        case 4:
+            printf("\nQual ponto deseja adquirir os valores? [1/2]: ");
+            scanf("%d", &op2);
+            if (op2 == 1)            {
+                TPonto_get_x(ponto1, &x);
+                TPonto_get_y(ponto1, &y);
+                printf("\nPonto 1: (%0.2f , %0.2f)\n", x, y);
+            }
+            else if (op2 == 2)
+            {
+                TPonto_get_x(ponto2, &x);
+                TPonto_get_y(ponto2, &y);
+                printf("\nPonto 2: (%0.2f , %0.2f)\n", x, y);
+            }
+            else
+            {
+                printf("\nOpção inválida!\n");
+            }
+            break;
         case 0:
-            printf("Saindo...\n");
+            printf("\nSaindo...\n");
             TPonto_destroy(ponto1);
             TPonto_destroy(ponto2);
             break;
         default:
-            printf("Opção inválida!\n");
+            printf("\nOpção inválida!\n");
             break;
         }
     } while (op != 0);
