@@ -22,18 +22,10 @@ Frac* Frac_soma(Frac* f1, Frac* f2) {
 }
 
 Frac* Frac_mult(Frac* f1, Frac* f2) {
-    int numm = f1->num * f2->num;
-    int denm = f1->den * f2->den;
-    printf("\nMultiplicação: %d/%d\n", numm, denm);
-    return Frac_create(numm, denm);
+    printf("\nMultiplicação: %d/%d\n", f1->num * f2->num, f1->den * f2->den);
+    return Frac_create(f1->num * f2->num, f1->den * f2->den);
 }
 
 int Frac_equals(Frac* f1, Frac* f2) {
-    if (f1->num * f2->den == f2->num * f1->den) {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    return f1->num * f2->den == f2->num * f1->den;
 }

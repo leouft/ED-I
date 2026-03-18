@@ -16,10 +16,10 @@ void main()
     Frac* mult = Frac_mult(f1, f2);
 
     if (Frac_equals(f1, f2)) {
-        printf("\nAs frações resultantes são iguais.\n");
+        printf("\nAs frações iniciais são iguais.\n");
     }
     else
     {
-        printf("\nAs frações resultantes são diferentes.\n");
+        printf("\nAs frações iniciais são diferentes.\n");
     }
 }
