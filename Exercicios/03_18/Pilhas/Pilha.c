@@ -29,28 +29,32 @@ bool pilha_is_full(Pilha *p)
     return p->index == (p->tamanho - 1);
 }
 
-void pilha_insert(Pilha *p, int x)
+bool pilha_insert(Pilha *p, int x)
 {
     if (!pilha_is_full(p))
     {
         p->index++;
         p->data[p->index] = x;
         printf("\nElemento inserido com sucesso.\n");
+        return true;
     }
     else
         printf("\nPilha já está cheia.\n");
+    return false;
 }
 
-void pop(Pilha *p)
+bool pop(Pilha *p)
 {
     if (p->index > -1)
     {
         p->data[p->index] = 0;
         p->index--;
-        printf("\nElemento removido ocm sucesso.\n");
+        printf("\nElemento removido com sucesso.\n");
+        return true;
     }
     else
         printf("\nPilha já está vazia.\n");
+        return false;
 }
 
 int pilha_acess(Pilha *p)
