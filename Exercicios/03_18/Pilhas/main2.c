@@ -23,7 +23,7 @@ void main()
             }
     }
 
-    if (correto)
+    if (correto && pilha_acess(pilha) == 0)
         printf("\nParenteses corretos.\n");
     else
         printf("\nParenteses incorretos.\n");
