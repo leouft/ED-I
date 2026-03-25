@@ -27,7 +27,8 @@ void main()
                 pop(pilha);
                 break;
             case 3:
-                printf("\nElemento do topo da pilha: %d\n", pilha_acess(pilha));
+                pilha_acess(pilha, &op2);
+                printf("\nElemento do topo da pilha: %d\n", op2);
                 break;
             case 4:
                 pilha_info(pilha);

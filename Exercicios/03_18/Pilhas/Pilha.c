@@ -57,9 +57,24 @@ bool pop(Pilha *p)
         return false;
 }
 
-int pilha_acess(Pilha *p)
+bool pilha_is_empty(Pilha *p)
 {
-    return p->data[p->index];
+    return p->index == -1;
+}
+
+
+bool pilha_acess(Pilha *p, int *valor)
+{
+    if(pilha_is_empty(p))
+        return false;
+    int topo = p->data[p->index];
+    *valor = topo;
+    return true;
+}
+
+unsigned int pilha_len(Pilha *p)
+{
+    return p->index;
 }
 
 void pilha_destroy(Pilha *p)
@@ -76,5 +91,5 @@ void pilha_info(Pilha *p)
     else if (pilha_is_full(p))
         printf("A pilha está cheia.\n");
     else
-        printf("A pilha tem %d elementos.\n", p->index + 1);
+        printf("A pilha tem %d elementos.\n", pilha_len(p)+1);
 }

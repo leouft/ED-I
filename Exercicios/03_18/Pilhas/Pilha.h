@@ -8,11 +8,15 @@ Pilha *pilha_create(int);
 
 bool pilha_is_full(Pilha*);
 
+bool pilha_is_empty(Pilha*);
+
 bool pilha_insert(Pilha*, int);
 
 bool pop(Pilha*);
 
-int pilha_acess(Pilha*);
+bool pilha_acess(Pilha*, int*);
+
+unsigned int pilha_len(Pilha*);
 
 void pilha_destroy(Pilha*);
 
