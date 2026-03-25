@@ -18,6 +18,4 @@ void pilha_destroy(Pilha*);
 
 void pilha_info(Pilha*);
 
-int pilha_index(Pilha*);
-
 #endif
