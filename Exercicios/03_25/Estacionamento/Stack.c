@@ -63,7 +63,6 @@ bool stackPush(Pilha *pilha, int id)
 
 bool stackPop(Pilha *pilha, Pilha *pilha_sec, int *id, int op)
 {
-    // for (int i = 0; i < pilha->qty; i++)
     while (pilha->topo != NULL)
     {
         printf("%d, ", pilha->topo->id);
