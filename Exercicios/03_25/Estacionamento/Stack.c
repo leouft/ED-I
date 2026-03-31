@@ -57,7 +57,7 @@ bool stackPush(Pilha *pilha, int id)
         return true;
     }
     else
-        printf("overflow (limite atingido).\n");
+        printf("overflow\n");
     return false;
 }
 
@@ -86,7 +86,7 @@ bool stackPop(Pilha *pilha, Pilha *pilha_sec, int *id, int op)
         pilha_sec->qty++;
     }
     stackRetornar(pilha, pilha_sec);
-    printf("underflow (carro não encontrado).\n");
+    printf("underflow\n");
     return false;
 }
 
