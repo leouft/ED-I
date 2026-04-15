@@ -16,17 +16,11 @@ void main()
         case 'I':
         case 'i':
             scanf("%d", &info);
-            if (enqueue(queue, info))
-                printf("\nElemento inserido na fila.\n");
-            else
-                printf("\nOverflow.\n");
+            enqueue(queue, info);
             break;
         case 'R':
         case 'r':
-            if (dequeue(queue, &info))
-                printf("\nElemento do final da fila removido.\n");
-            else
-                printf("\nUnderflow.\n");
+            dequeue(queue, &info);
             break;
         case 'A':
         case 'a':

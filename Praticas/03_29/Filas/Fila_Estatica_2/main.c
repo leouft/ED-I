@@ -15,12 +15,25 @@ void main()
         {
         case 'I':
         case 'i':
+            scanf(" %c", &op);
             scanf("%d", &info);
-            enqueue(queue, info);
+            if (op == 'h' || op == 'H')
+                if (enqueueHead(queue, info))
+                    printf("\nElemento inserido no início.\n");
+                else
+                    printf("\nOverflow.\n");
+            else if (op == 'T' || op == 't')
+                if (enqueueEnd(queue, info))
+                    printf("\nElemento inserido no final.\n");
+                else
+                    printf("\nOverflow.\n");
             break;
         case 'R':
         case 'r':
-            dequeue(queue, &info);
+            if(dequeue(queue, &info))
+                printf("\nElemento removido.\n");
+            else
+                printf("\nUnderflow.\n");
             break;
         case 'A':
         case 'a':
@@ -60,5 +73,5 @@ void main()
             printf("\nQuantidades de elementos na fila: %d\n", queueQtd(queue));
             break;
         }
-    } while (op != 's' && op != 'S');
+    } while (op != 's' && op != 'S' && op != 'd' && op != 'D');
 }

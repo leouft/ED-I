@@ -12,6 +12,8 @@ bool dequeue(Queue*, int*);
 
 bool queueAcess(Queue*, int*);
 
+//void queueDestroy(Queue**); so pra destruir por completo
+
 void queueDestroy(Queue*);
 
 unsigned int queueQtd(Queue*);

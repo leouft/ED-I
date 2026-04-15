@@ -6,7 +6,9 @@ typedef struct _queue Queue;
 
 Queue* createQueue();
 
-bool enqueue(Queue*, int);
+bool enqueueEnd(Queue*, int);
+
+bool enqueueHead(Queue*, int);
 
 bool dequeue(Queue*, int*);
 

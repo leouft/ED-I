@@ -1,7 +1,6 @@
 #include "Queue.h"
 #include <stdbool.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 #define MAX 10
 
@@ -44,7 +43,6 @@ bool enqueue(Queue* queue, int info) {
         queue->qty++;
         return true;
     }
-    printf("\nLimite atingido.\n");
     return false;
 }
 
@@ -57,7 +55,6 @@ bool dequeue(Queue* queue, int* retorno) {
         free(temp);
         return true;
     }
-    printf("\nUnderflow.\n");
     return false;
 }
 

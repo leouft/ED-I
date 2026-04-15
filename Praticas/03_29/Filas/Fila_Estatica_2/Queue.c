@@ -10,15 +10,27 @@ struct _queue {
 };
 
 Queue* createQueue() {
-    Queue* novo = malloc(sizeof(Queue));
+    Queue* novo = malloc(sizeof(*novo));
     if (!novo) return NULL;
     novo->qty = 0;
     return novo;
 }
 
-bool enqueue(Queue* queue, int info) {
-    if (!queueIsFull(queue)) {
+bool enqueueEnd(Queue* queue, int info) {
+    if (!queueIsFull(queue) && queue != NULL) {
         queue->info[queue->qty] = info;
+        queue->qty++;
+        return true;
+    }
+    return false;
+}
+
+bool enqueueHead(Queue* queue, int info) {
+    if (!queueIsFull(queue) && queue != NULL) {
+        for(int i = queue->qty; i > 0; i--) {
+            queue->info[i] = queue->info[i-1];
+        }
+        queue->info[0] = info;
         queue->qty++;
         return true;
     }

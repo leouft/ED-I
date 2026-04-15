@@ -14,7 +14,7 @@ bool queueAcess(Queue*, int*);
 
 void queueDestroy(Queue*);
 
-unsigned int queueQtd(Queue*);
+int queueQtd(Queue*);
 
 bool queueIsEmpty(Queue*);
 

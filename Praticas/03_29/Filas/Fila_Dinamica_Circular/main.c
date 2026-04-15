@@ -17,14 +17,14 @@ void main()
         case 'i':
             scanf("%d", &info);
             if (enqueue(queue, info))
-                printf("\nElemento inserido na fila.\n");
+                printf("\nElemento inserido.\n");
             else
                 printf("\nOverflow.\n");
             break;
         case 'R':
         case 'r':
             if (dequeue(queue, &info))
-                printf("\nElemento do final da fila removido.\n");
+                printf("\nElemento removido.\n");
             else
                 printf("\nUnderflow.\n");
             break;
@@ -38,21 +38,16 @@ void main()
             break;
         case 'D':
         case 'd':
-            queueDestroy(queue);
+        
+            /* pra sumir com isso fr
+            queueDestroy(&queue);
             printf("\nFila destruída.\n");
             break;
+            */
 
-        /* Mesma coisa do case A
-        case 'h':
-        case 'H':
-            if(queueHead(queue, &info)) {
-                printf("\nPrimeiro da fila: %d\n", info);
-                break;
-            }
-            printf("\nFila vazia.\n");
+            queueDestroy(queue); // sumir do jeito convencional
+            printf("\nFila destruída.\n");
             break;
-        */
-
         case 'T':
         case 't':
             if(queueTail(queue, &info)) {
@@ -66,5 +61,5 @@ void main()
             printf("\nQuantidades de elementos na fila: %d\n", queueQtd(queue));
             break;
         }
-    } while (op != 's' && op != 'S' && op != 'd' && op != 'D');
+    } while (op != 's' && op != 'S');
 }
