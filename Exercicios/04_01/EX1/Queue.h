@@ -12,9 +12,11 @@ bool dequeue(Queue*, int*);
 
 bool queueAcess(Queue*, int*);
 
+//void queueDestroy(Queue**); so pra destruir por completo
+
 void queueDestroy(Queue*);
 
-int queueQtd(Queue*);
+unsigned int queueQtd(Queue*);
 
 bool queueIsEmpty(Queue*);
 
@@ -23,5 +25,7 @@ bool queueIsFull(Queue*);
 bool queueHead(Queue*, int*);
 
 bool queueTail(Queue*, int*);
+
+void queueInvert(Queue*);
 
 #endif
