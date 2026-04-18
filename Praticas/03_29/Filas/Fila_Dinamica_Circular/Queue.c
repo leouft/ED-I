@@ -24,7 +24,7 @@ Queue* createQueue() {
 
 bool enqueue(Queue* queue, int info) {
     if (!queueIsFull(queue)) {
-        No* new = malloc(sizeof(new));
+        No* new = malloc(sizeof(*new));
 
         new->info = info;
         if (queueIsEmpty(queue)) {
