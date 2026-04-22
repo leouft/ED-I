@@ -34,7 +34,6 @@ bool stackPush(Stack* stack, char c) {
 bool stackPop(Stack* stack, char *c){
     if (!stackIsEmpty(stack)) {
         TNo* temp;
-        if (!temp) return false;
         temp = stack->info;
         stack->info = stack->info->prox;
         *c = temp->c;

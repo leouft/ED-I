@@ -35,7 +35,6 @@ bool stackPush(Stack* stack, int v) {
 bool stackPop(Stack* stack, int *v){
     if (!stackIsEmpty(stack)) {
         TNo* temp;
-        if (!temp) return false;
         temp = stack->info;
         stack->info = stack->info->prox;
         *v = temp->v;
