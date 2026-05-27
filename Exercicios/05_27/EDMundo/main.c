@@ -10,6 +10,8 @@ int main(){
     int M;
     scanf("%d", &M);
 
-    printf("Pessoa sorteada: %d\n",TCList_sorteio(N, M));
+    TCList* lista = TCList_create();
+
+    printf("Pessoa sorteada: %d\n",TCList_sorteio(lista, N, M));
     return 0;
 }

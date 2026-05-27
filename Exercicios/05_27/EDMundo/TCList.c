@@ -65,9 +65,7 @@ void TCList_print(TCList* lista){
     putchar('\n');
 }
 
-int TCList_sorteio(int N, int M) {
-    TCList* lista = TCList_create();
-
+int TCList_sorteio(TCList* lista, int N, int M) {
     // Insere os N elementos (ou seja, as pessoas)
     for (int i = 0; i < N; i++) {
         TCList_insert(lista, i);
