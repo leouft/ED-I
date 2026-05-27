@@ -11,6 +11,9 @@ int main(){
     scanf("%d", &M);
 
     TCList* lista = TCList_create();
+    for (int i = 0; i < N; i++) {
+        TCList_insert(lista, i);
+    }
 
     printf("Pessoa sorteada: %d\n",TCList_sorteio(lista, N, M));
     return 0;

@@ -66,10 +66,6 @@ void TCList_print(TCList* lista){
 }
 
 int TCList_sorteio(TCList* lista, int N, int M) {
-    // Insere os N elementos (ou seja, as pessoas)
-    for (int i = 0; i < N; i++) {
-        TCList_insert(lista, i);
-    }
     TNo* aux = lista->inicio;
     while (lista->inicio->prox != lista->inicio) {
         // Percorrer até a pessoa anterior a que será removida
@@ -77,17 +73,12 @@ int TCList_sorteio(TCList* lista, int N, int M) {
             aux = aux->prox;
         }
         TNo* temp = aux->prox;
-        if (temp == lista->inicio)
+        if (temp == lista->inicio) // Evita que a lista fica sem inicio
             lista->inicio = temp->prox;
         aux->prox = aux->prox->prox; // O elemento atual irá apontar pro elemento logo após o que será removido
         aux = aux->prox;
         free (temp);
     }
 
-    int vencedor = lista->inicio->info+1;
-
-    free(lista->inicio);
-    free(lista);
-
-    return (vencedor);
+    return (lista->inicio->info+1);
 }
