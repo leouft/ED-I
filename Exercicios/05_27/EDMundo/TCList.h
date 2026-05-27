@@ -20,6 +20,6 @@ bool TCList_insert(TCList*, int);
  */
 void TCList_print(TCList*);
 
-int TCList_sorteio(TCList*, int, int);
+int TCList_sorteio(TCList*, int);
 
 #endif

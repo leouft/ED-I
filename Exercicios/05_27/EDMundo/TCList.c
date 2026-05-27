@@ -65,7 +65,7 @@ void TCList_print(TCList* lista){
     putchar('\n');
 }
 
-int TCList_sorteio(TCList* lista, int N, int M) {
+int TCList_sorteio(TCList* lista, int M) {
     TNo* aux = lista->inicio;
     while (lista->inicio->prox != lista->inicio) {
         // Percorrer até a pessoa anterior a que será removida

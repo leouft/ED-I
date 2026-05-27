@@ -15,6 +15,6 @@ int main(){
         TCList_insert(lista, i);
     }
 
-    printf("Pessoa sorteada: %d\n",TCList_sorteio(lista, N, M));
+    printf("Pessoa sorteada: %d\n",TCList_sorteio(lista, M));
     return 0;
 }
