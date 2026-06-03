@@ -21,12 +21,18 @@ TDList* TDList_create() {
     return new;
 }
 
-bool TDList_insert_begin(TDList* list, int value) {
+TNo* TNo_createNFill(int value) {
     TNo* new = malloc(sizeof(TNo));
-    if (!new) return false;
-    new->info = value;
-    new->prox = NULL;
+    if (!new) return NULL;
     new->ant = NULL;
+    new->prox = NULL;
+    new->info = value;
+    return new;
+}
+
+bool TDList_insert_begin(TDList* list, int value) {
+    TNo* new = TNo_createNFill(value);
+    if (!new) return false;
     if (list->inicio != NULL) {
         list->inicio->ant = new;
         new->prox = list->inicio;
@@ -38,11 +44,8 @@ bool TDList_insert_begin(TDList* list, int value) {
 }
 
 bool TDList_insert_end(TDList* list, int value) {
-    TNo* new = malloc(sizeof(TNo));
+    TNo* new = TNo_createNFill(value);
     if (!new) return false;
-    new->info = value;
-    new->prox = NULL;
-    new->ant = NULL;
     if (list->fim != NULL) {
         list->fim->prox = new;
         new->ant = list->fim;
