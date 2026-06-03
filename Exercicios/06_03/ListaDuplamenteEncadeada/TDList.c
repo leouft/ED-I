@@ -17,6 +17,7 @@ TDList* TDList_create() {
     TDList* new = malloc(sizeof(TDList));
     if (!new) return NULL;
     new->inicio = NULL;
+    new->fim = NULL;
     return new;
 }
 
