@@ -71,3 +71,27 @@ void TDList_reverse_print(TDList* list) {
         aux = aux->ant;
     }
 }
+
+bool TDList_remove_end(TDList* list, int* info) {
+    if (list->inicio != NULL) {
+        TNo* temp = list->fim;
+        temp->ant->prox = NULL;
+        list->fim = temp->ant;
+        *info = temp->info;
+        free(temp);
+        return true;
+    }
+    return false;
+}
+
+bool TDList_remove_begin(TDList* list, int* info) {
+    if (list->inicio != NULL) {
+        TNo* temp = list->inicio;
+        list->inicio = temp->prox;
+        list->inicio->ant = NULL;
+        *info = temp->info;
+        free(temp);
+        return true;
+    }
+    return false;
+}

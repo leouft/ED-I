@@ -31,4 +31,18 @@ void TDList_print(TDList*);
  */
 void TDList_reverse_print(TDList*);
 
+/**
+ * Remove o elemento final da lista.
+ * @param TDList* Lista com o elemento que será removido.
+ * @param int* Ponteiro de quem receberá o elemento removido.
+ */
+bool TDList_remove_end(TDList*, int*);
+
+/**
+ * Remove o elemento inicial da lista.
+ * @param TDList* Lista com o elemento que será removido.
+ * @param int* Ponteiro de quem receberá o elemento removido.
+ */
+bool TDList_remove_begin(TDList*, int*);
+
 #endif
