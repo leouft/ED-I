@@ -13,8 +13,10 @@ typedef struct _list TGList;
  * Cria instâncias da TGList;
  * @param char Tipo de Política de Inserção 
  *  Aceita os valores NO_INICIO, NO_FIM, ORDENADA
+ * @param void Função que faz print do elemento
+ * @param unsigned_int Tamanho dos elementos que serão passados.
  */
-TGList* TGList_create(char, void (*ptr_func)(void*), size_t);
+TGList* TGList_create(char, void (*ptr_func)(void*), unsigned int);
 /**
  * Política de inserção da lista. 
  * Obedece ao parâmetro passado na criação da lista;

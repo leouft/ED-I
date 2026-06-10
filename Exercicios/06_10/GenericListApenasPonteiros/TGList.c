@@ -13,12 +13,12 @@ struct _list{
     TNo* inicio;
     char policy;//Política de inserção
     void (*ptr_func)(void*);
-    size_t info_size;
+    unsigned int info_size;
 };
 
 
 //Funcao auxiliar para preencher um nó
-TNo* TNo_createNFill(void* info, size_t info_size){
+TNo* TNo_createNFill(void* info, unsigned int info_size){
     TNo* new = malloc(sizeof(TNo));
     if (!new) return NULL;
     new->prox = NULL;
@@ -38,7 +38,7 @@ TNo* TNo_createNFill(void* info, size_t info_size){
 bool TGList_insert_begin(TGList* lista, void* info);
 bool TGList_insert_end(TGList* lista, void* info);
 
-TGList* TGList_create(char policy, void (*ptr_func)(void*), size_t info_size){
+TGList* TGList_create(char policy, void (*ptr_func)(void*), unsigned int info_size){
     //if(policy) posso testar se os valores estão de acordo...
     TGList* nova = malloc(sizeof(TGList));
     if(nova != NULL){
