@@ -33,8 +33,8 @@ TGList* TGList_create(char policy){
 }
 bool TGList_insert(TGList* lista, int info){
     switch(lista->policy){
-        case NO_INICIO: return TGList_insert_begin(lista, info);
-        case NO_FIM: return TGList_insert_end(lista, info);
+        case NO_INICIO: return TGList_insert_begin(lista, info); break;
+        case NO_FIM: return TGList_insert_end(lista, info); break;
     }
     return false;
 }
